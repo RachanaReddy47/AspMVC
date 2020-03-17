@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using(Html.BeginForm("ShowData","Unbound")) 
+{ 
+    <table>
+        <tr><td>Empno</td><td>@Html.TextBox("txtEmpno")</td></tr>
+        <br/>
+        <tr><td>Ename</td><td>@Html.TextBox("txtEname")</td></tr>
+        <br/>
+        <tr><td>Salary</td><td>@Html.TextBox("txtSalary")</td></tr>
+        <br/>
+        <tr><td><input type="submit" /></td></tr>
+    </table>
+
+}
+

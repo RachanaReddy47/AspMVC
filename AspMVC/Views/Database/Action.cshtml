@@ -1,0 +1,37 @@
+﻿@model AspMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Action";
+}
+<script lang="javascript" type="text/javascript">
+    function func1() {
+        var eno = document.getElementById("EMPNO").value;
+
+        window.location.href = "/Database/Action1?e=" + eno;
+    }
+</script>
+
+
+@using (Html.BeginForm("Update","Database"))
+{
+    <table>
+        @*<tr><td>Empno</td><td>@Html.TextBoxFor(a=>a.EMPNO,new { id = "id_of_your_textbox" })</td></tr>*@
+        <tr><td>Empno</td><td>@Html.TextBoxFor(b=>b.EMPNO,new { onblur = "func1();"})</td></tr>
+        <tr><td>Ename</td><td>@Html.TextBoxFor(E=>E.ENAME)</td></tr>
+        <tr><td>Job</td><td>@Html.TextBoxFor(E=>E.JOB)</td></tr>
+        <tr><td>MGR</td><td>@Html.TextBoxFor(E=>E.MGR)</td></tr>
+        <tr><td>HireDate</td><td>@Html.TextBoxFor(E=>E.HIREDATE)</td></tr>
+        <tr><td>Salary</td><td>@Html.TextBoxFor(E=>E.SAL)</td></tr>
+        <tr><td>Commission</td><td>@Html.TextBoxFor(E=>E.COMM)</td></tr>
+        <tr><td>Deptno</td><td>@Html.TextBoxFor(E=>E.DEPTNO)</td></tr>
+        <tr><td><input type="submit" /></td></tr>
+    </table>
+
+    if(ViewBag.msg!=null)
+    {
+        <h3>
+            @ViewBag.msg
+        </h3>
+    }
+
+
+}

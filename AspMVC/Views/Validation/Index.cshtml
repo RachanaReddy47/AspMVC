@@ -1,0 +1,60 @@
+﻿@model AspMVC.Models.ValidationCls
+@{
+     ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+ {
+<table>
+    <tr>
+        <td>Firstname</td>
+        <td>@Html.TextBoxFor(a => a.FirstName1)</td>
+        <td>@Html.ValidationMessageFor(a => a.FirstName1, "", new { @class = "text-danger" })</td>
+    </tr>
+    <tr>
+        <td>LastName</td>
+        <td>@Html.TextBoxFor(a => a.LastName1)</td>
+        <td>@Html.ValidationMessageFor(a => a.LastName1, "", new { @class = "text-danger" })</td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>@Html.TextBoxFor(a => a.Salary)</td>
+        <td>@Html.ValidationMessageFor(a => a.Salary, "", new { @class = "text-danger" })</td>
+    </tr>
+    <tr>
+        <td>Pancard</td>
+        <td>@Html.TextBoxFor(a => a.Pancard)</td>
+        <td>@Html.ValidationMessageFor(a => a.Pancard)</td>
+    </tr>
+    <tr>
+        <td>Password</td>
+        <td>@Html.PasswordFor(a => a.Password)</td>
+        <td>@Html.ValidationMessageFor(a => a.Password)</td>
+    </tr>
+    <tr>
+        <td>Confirm Password</td>
+        <td>@Html.PasswordFor(a => a.ConfirmPassword)</td>
+        <td>@Html.ValidationMessageFor(a => a.ConfirmPassword)</td>
+    </tr>
+    <tr>
+        <td>Phone no</td>
+        <td>@Html.TextBoxFor(a => a.Phone)</td>
+        <td>@Html.ValidationMessageFor(a => a.Phone)</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Html.TextBoxFor(a => a.Email)</td>
+        <td>@Html.ValidationMessageFor(a => a.Email)</td>
+    </tr>
+    <tr>
+        <td>Doj</td>
+        <td>@Html.TextBoxFor(a => a.Doj)</td>
+        <td>@Html.ValidationMessageFor(a => a.Doj)</td>
+    </tr>
+
+    <tr>
+        <td><input type="submit" value="submit" /></td>
+    </tr>
+</table>
+}

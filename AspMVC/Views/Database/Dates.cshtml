@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Dates";
+}
+
+@using (Html.BeginForm("DisplayDate","Database"))
+{
+    <table>
+        <tr>
+            <td>StartDate</td>
+            <td>@Html.TextBox("txtStart",Request["txtStart"])</td>
+        </tr>
+        <tr>
+            <td>EndDate</td>
+            <td>@Html.TextBox("txtEnd",Request["txtEnd"])</td>
+        </tr>
+        <tr>
+            <td><input type="submit"/></td>   
+        </tr>
+    </table>
+
+    if(ViewBag.Emp!=null)
+    {
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>Ename</td>
+        <td>Job</td>
+        <td>MGR</td>
+        <td>Hiredate</td>
+        <td>Salary</td>
+        <td>Commission</td>
+        <td>Deptno</td>
+    </tr>
+    @foreach(var E in ViewBag.Emp )
+    {
+<tr>
+    <td>@E.EMPNO</td>
+    <td>@E.ENAME</td>
+    <td>@E.JOB</td>
+    <td>@E.MGR</td>
+    <td>@E.HIREDATE</td>
+    <td>@E.SAL</td>
+    <td>@E.COMM</td>
+    <td>@E.DEPTNO</td>
+</tr>
+    }
+</table>
+    }
+}

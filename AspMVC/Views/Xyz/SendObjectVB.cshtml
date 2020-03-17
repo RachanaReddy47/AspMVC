@@ -1,0 +1,24 @@
+﻿@*@model AspMVC.Models.Emp*@
+@{
+    ViewBag.Title = "SendObjectVB";
+    var str = ViewData["ofc"] as AspMVC.Models.Emp;
+}
+
+<h2>SendObjectVB</h2>
+
+Empno: @ViewBag.xyz.Empno
+<br />
+Ename:@ViewBag.xyz.Ename
+<br />
+Salary:@ViewBag.xyz.Salary
+<br />
+
+
+Empno: @str.Empno
+<br />
+Ename:@str.Ename
+<br />
+Salary:@str.Salary
+<br />
+
+
